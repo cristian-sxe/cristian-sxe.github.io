@@ -288,6 +288,9 @@ button{
   .popup-true div{
     font-size:5vw;
   }
+  .b-game-card__cover {
+    font-size:8vw;
+  }
 }
 
 @media (min-width: 576px){
@@ -306,6 +309,9 @@ button{
   }
   .popup-true div{
     font-size:5vw;
+  }
+  .b-game-card__cover {
+    font-size:8vw;
   }
 }
 
@@ -326,6 +332,9 @@ button{
   .popup-true div{
     font-size:5vw;
   }
+  .b-game-card__cover {
+    font-size:2.5vw;
+  }
 }
 
 @media (min-width: 1024px){
@@ -344,6 +353,9 @@ button{
   }
   .popup-true div{
     font-size:4.5vw;
+  }
+  .b-game-card__cover {
+    font-size:3vw;
   }
 }
 
@@ -364,6 +376,9 @@ button{
   .popup-true div{
     font-size:4vw;
   }
+  .b-game-card__cover {
+    font-size:2.5vw;
+  }
 }
 
 @media (min-width: 1570px){
@@ -382,6 +397,9 @@ button{
   }
   .popup-true div{
     font-size:3.5vw;
+  }
+  .b-game-card__cover {
+    font-size:2.5vw;
   }
 }
 
@@ -434,7 +452,6 @@ button{
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  font-size: 2.5vw;
 }
 .b-game-card__cover::after {
   display: block;
