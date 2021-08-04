@@ -1,0 +1,498 @@
+@font-face {
+    font-family: "ADK-Butterfly-Ball";
+    src: url(/assets/fonts/ADK-Butterfly-Bal.ttf) format("truetype");    
+}
+
+/* Estadisticas */
+.stats{
+    border:none;
+    border-radius:20px;
+    background-color:#018CC1;
+    margin-bottom: 1%;
+}
+
+/*Juego*/
+.game{
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    width:auto;
+    border-radius:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-game{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  cursor: url('../img/lupa.png'),auto;
+}
+.hiddenStart{
+  display: none;
+}
+
+button{
+  cursor: url('../img/cursorclick.png'),auto !important;
+}
+
+.container-game img{
+    border-radius: 20px;
+    transition:1s;
+}
+
+
+/*Opciones*/
+#instrucciones{
+    background-color: #f70968;
+    border:none;
+    border-radius:10px;
+    padding: 2%;
+    margin-top:2%;
+}
+
+.instrucciones span{
+    cursor: url('../img/cursorclick.png'),auto;
+    font-family: 'ADK-Butterfly-Ball', sans-serif;
+    background-color: #ffc121;
+    color:#FFFFFF;
+    border: none;
+    outline: none; 
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.instrucciones{
+    font-family: 'ADK-Butterfly-Ball', sans-serif;
+    text-align: center;
+    margin: 0;
+    color:#FFFFFF;
+    font-size: 30px;
+}
+
+/* START BTN */
+
+.button-pushable {
+  position: absolute;
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top:30%;
+}
+
+.button-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-front {
+  font-family: 'ADK-Butterfly-Ball', sans-serif; 
+  display: block;
+  position: relative;
+  padding: 1vw 2vw;
+  border-radius: 12px;
+  font-size: 100%;
+  color: white;
+  background: hsl(28deg 86% 55%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-pushable:hover {
+  filter: brightness(110%);
+}
+
+.button-pushable:hover .button-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pushable:active .button-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-pushable:hover .button-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pushable:active .button-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/*POPUP MENU*/
+.popup{
+  position: absolute;
+  width:80%;
+  height:80%;
+  background-color: #5B2290;
+  border:none;
+  top:10%;  
+  border-radius:10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: center;
+  color: white;
+  box-shadow: -1px -1px 20px 5px #5b2290;
+}
+
+.popup.hide, .popup-true.hide{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+.popup.show, .popup-true.show{
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup button{
+  font-family: 'ADK-Butterfly-Ball', sans-serif;
+    cursor: pointer;
+    background-color: #F4E824;
+    color:#ED822E;
+    border: none;
+    outline: none; 
+    padding: 5px;
+    border-radius: 10px;
+    width:70%;
+}
+
+.popup button:hover {
+  color: #FFFFFF;
+  background:#f70968;
+}
+
+.popup-title{
+  font-family: 'ADK-Butterfly-Ball', sans-serif;
+    text-align: center;
+    margin: 0;
+    color:#F4E824;
+}
+
+/*popup acierto*/
+.popup-true{
+  position: absolute;
+  width:80%;
+  height:60%;
+  border:none;
+  top:20%;  
+  border-radius:10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.popup-true div{
+  color: #F4E824;
+  font-family: 'ADK-Butterfly-Ball', sans-serif;
+}
+
+
+/*MEDIAS*/
+@media (max-width: 320px){
+
+  .score > div, .time > div{
+    font-size: 10px;
+    color:#FFFFFF;
+    font-family: 'ADK-Butterfly-Ball', sans-serif;  
+  }
+
+  .popup button{
+    font-size: 10px;
+  }
+  .popup-title{
+    font-size: 15px;
+  }
+  .popup-true div{
+    font-size:5vw;
+  }
+}
+
+
+@media (min-width: 321px){
+
+  .score > div, .time > div{
+    font-size: 13px;
+    color:#FFFFFF;
+    font-family: 'ADK-Butterfly-Ball', sans-serif;  
+  }
+
+  .popup button{
+    font-size: 3vw;
+  }
+  .popup-title{
+    font-size: 5.8vw;
+  }
+
+  .popup-true div{
+    font-size:5vw;
+  }
+}
+
+@media (min-width: 576px){
+
+  .score > div, .time > div{
+    font-size: 20px;
+    color:#FFFFFF;
+    font-family: 'ADK-Butterfly-Ball', sans-serif;  
+  }
+
+  .popup button{
+    font-size: 2.6vw;
+  }
+  .popup-title{
+    font-size: 5.2vw;
+  }
+  .popup-true div{
+    font-size:5vw;
+  }
+}
+
+@media (min-width: 769px){
+
+  .score > div, .time > div{
+    font-size: 25px;
+    color:#FFFFFF;
+    font-family: 'ADK-Butterfly-Ball', sans-serif;  
+  }
+
+  .popup button{
+    font-size: 3vw;
+  }
+  .popup-title{
+    font-size: 5.5vw;
+  }
+  .popup-true div{
+    font-size:5vw;
+  }
+}
+
+@media (min-width: 1024px){
+
+  .score > div, .time > div{
+    font-size: 25px;
+    color:#FFFFFF;
+    font-family: 'ADK-Butterfly-Ball', sans-serif;  
+  }
+
+  .popup button {
+    font-size: 2.2vw;
+  }
+  .popup-title{
+    font-size: 4.5vw;
+  }
+  .popup-true div{
+    font-size:4.5vw;
+  }
+}
+
+@media (min-width: 1440px){
+
+  .score > div, .time > div{
+    font-size: 25px;
+    color:#FFFFFF;
+    font-family: 'ADK-Butterfly-Ball', sans-serif;  
+  }
+
+  .popup button{
+    font-size: 2.2vw;
+  }
+  .popup-title{
+    font-size: 4.5vw;
+  }
+  .popup-true div{
+    font-size:4vw;
+  }
+}
+
+@media (min-width: 1570px){
+
+  .score > div, .time > div{
+    font-size: 25px;
+    color:#FFFFFF;
+    font-family: 'ADK-Butterfly-Ball', sans-serif;  
+  }
+
+  .popup button{
+    font-size: 1.6vw;
+  }
+  .popup-title{
+    font-size: 3.7vw;
+  }
+  .popup-true div{
+    font-size:3.5vw;
+  }
+}
+
+
+/*Seleccion de capitulo*/
+.l-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+}
+@media screen and (max-width: 760px) {
+  .l-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.b-game-card {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  padding-bottom: 150%;
+  perspective: 1000px;
+}
+
+.b-game-card__cover {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-size: cover;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  will-change: transform;
+  transform: skewX(0.001deg);
+  transition: transform 0.35s ease-in-out;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 20px;
+  cursor: url('../img/cursorclick.png'),auto;
+  font-family: 'ADK-Butterfly-Ball', sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  font-size: 2.5vw;
+}
+.b-game-card__cover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background: linear-gradient(226deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 35%, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0) 60%);
+  transform: translateY(-20%);
+  will-change: transform;
+  transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.58, 1);
+}
+.b-game-card:hover .b-game-card__cover {
+  transform: rotateX(7deg) translateY(-6px);
+}
+.b-game-card:hover .b-game-card__cover::after {
+  transform: translateY(0%);
+}
+.b-game-card::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 12px 12px rgba(141, 68, 0, 0.8);
+  will-change: opacity;
+  transform-origin: top center;
+  transform: skewX(0.001deg);
+  transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+  border-radius:15px;
+}
+.b-game-card:hover::before {
+  opacity: 0.6;
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+
+.card-niveles{
+  background-color:#ffe2a2;
+  border-radius: 20px;
+}
+
+/*Footer*/
+.footer{
+  display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Banner reglas*/
+.reglas-banner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
