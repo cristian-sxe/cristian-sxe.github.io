@@ -93,6 +93,18 @@ button{
   margin-top:30%;
 }
 
+.button-pushable2{
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
 .button-shadow {
   position: absolute;
   top: 0;
@@ -131,7 +143,7 @@ button{
   position: relative;
   padding: 1vw 2vw;
   border-radius: 12px;
-  font-size: 100%;
+  font-size: 1.6rem;
   color: white;
   background: hsl(28deg 86% 55%);
   will-change: transform;
@@ -142,11 +154,11 @@ button{
     cubic-bezier(.3, .7, .4, 1);
 }
 
-.button-pushable:hover {
+.button-pushable:hover, .button-pushable2:hover{
   filter: brightness(110%);
 }
 
-.button-pushable:hover .button-front {
+.button-pushable:hover .button-front , .button-pushable2:hover .button-front{
   transform: translateY(-6px);
   transition:
     transform
@@ -154,12 +166,12 @@ button{
     cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.button-pushable:active .button-front {
+.button-pushable:active .button-front, .button-pushable2:active .button-front {
   transform: translateY(-2px);
   transition: transform 34ms;
 }
 
-.button-pushable:hover .button-shadow {
+.button-pushable:hover .button-shadow, .button-pushable2:hover .button-shadow{
   transform: translateY(4px);
   transition:
     transform
@@ -167,12 +179,12 @@ button{
     cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.button-pushable:active .button-shadow {
+.button-pushable:active .button-shadow, .button-pushable2:active .button-shadow {
   transform: translateY(1px);
   transition: transform 34ms;
 }
 
-.button-pushable:focus:not(:focus-visible) {
+.button-pushable:focus:not(:focus-visible), .button-pushable2:focus:not(:focus-visible){
   outline: none;
 }
 

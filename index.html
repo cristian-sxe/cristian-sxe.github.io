@@ -63,13 +63,22 @@
     </section>      
     <section class="section-bg" style="opacity: 1; padding: 15px;">
         <div class="container section-body" style="background: #ffc200; padding: 5%; border-radius: 1px 1px 20px 20px;">
+          <div class="row hiddenStart mb-2" style="flex-direction: column;">
+            <button type="button" class="button-pushable2 backBtn" role="button">
+              <span class="button-shadow"></span>
+              <span class="button-edge"></span>
+              <span class="button-front text">
+              Volver
+              </span>
+            </button>
+          </div>  
             <div class=" stats row content-bg-primary text-center hiddenStart">
                 <div class="score col-6"><div>OBJETOS ENCONTRADOS </div><div class="points">0</div></div>
                 <div class="time col-6"><div>TIEMPO </div><div class="seconds">0</div></div>
             </div>
             <div class="game row">
               <div class="col-md-12 container-game hiddenStart">
-                <img class="nivel" src="assets/img/comenzar.png"  width="100%" >
+                <img class="scene" src="assets/img/comenzar.png"  width="100%" >
                 <button type="button" class="startBtn button-pushable"  role="button">
                   <span class="button-shadow"></span>
                   <span class="button-edge"></span>
@@ -100,10 +109,9 @@
                       <button id="4" type = "button" class="btn-menu"></button>
                     </div>
                   </div>
-                  <div class="row text-center"><div class="col-12"><button id="btnCancel" type ="button" class="btn-menu"></button></div></div>
+                  <div class="row text-center"><div class="col-12"><button id="btnCancel" type ="button" class="btn-menu-cancel">Cerrar</button></div></div>
                 </div>
                 <div class="popup-true hide container">
-                  acertaste
                 </div>             
               </div>        
             </div>
@@ -130,13 +138,13 @@
               </div>
             </div>
             <div id="instrucciones" class="hiddenStart row justify-content-center alig-items-center">
-                <div class ="instrucciones">
-                    Busca los siguientes objetos<br>
-                    <span class='objetos' id="obj1"></span>
-                    <span class='objetos' id="obj2"></span>
-                    <span class='objetos' id="obj3"></span>
-                    <span class='objetos' id="obj4"></span>
-                </div>
+              <div class ="instrucciones">
+                  Busca los siguientes objetos<br>
+                  <span class='objetos' id="obj1"></span>
+                  <span class='objetos' id="obj2"></span>
+                  <span class='objetos' id="obj3"></span>
+                  <span class='objetos' id="obj4"></span>
+              </div>
             </div>
         </div>    
         <div class="container">
